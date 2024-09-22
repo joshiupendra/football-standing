@@ -1,0 +1,20 @@
+<div class="justify-content-center align-items-center d-flex">
+  <div class="col-4 p-5">
+    <form [formGroup]="footballForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="d-flex form-group p-3">
+          <label for="leagueId" class="col-3">League Id</label>
+          <input type="text" class="form-control" formControlName="leagueId" id="leagueId" name="leagueId">
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="col-4 p-5">
+    <div *ngIf="footballData">
+      <div *ngFor="let data of footballData; index as i;">
+        {{i}} : {{data.league_name}}
+      </div>
+    </div>
+  </div>
+</div>
