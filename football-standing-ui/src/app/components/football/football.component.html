@@ -13,7 +13,7 @@
   <div class="col-4 p-5">
     <div *ngIf="footballData">
       <div *ngFor="let data of footballData; index as i;">
-        {{i}} : {{data.league_name}}
+        {{i}} : {{data.team_id}} - {{data.team_name}}
       </div>
     </div>
   </div>
