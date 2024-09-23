@@ -8,11 +8,30 @@
         </div>
       </div>
       <button class="btn btn-success" type="submit">Submit</button>
+      <div class="row">
+        <div class="d-flex form-group p-3">
+          <label for="countryName" class="col-3">Country Name</label>
+          <input type="text" class="form-control" formControlName="countryName" id="countryName" name="countryName">
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-flex form-group p-3">
+          <label for="leagueName" class="col-3">League Name</label>
+          <input type="text" class="form-control" formControlName="leagueName" id="leagueName" name="leagueName">
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-flex form-group p-3">
+          <label for="teamName" class="col-3">Team Name</label>
+          <input type="text" class="form-control" formControlName="teamName" id="teamName" name="teamName">
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" (click)="onFilter()">Filter</button>
     </form>
   </div>
   <div class="col-4 p-5">
     <div *ngIf="footballData">
-      <div *ngFor="let data of footballData; index as i;">
+      <div *ngFor="let data of displayData; index as i;">
         {{i}} : {{data.team_id}} - {{data.team_name}}
       </div>
     </div>
